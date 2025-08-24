@@ -1,29 +1,52 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-export default function Home(){
+export default function Home() {
   return (
-    <div>
-      <section className="hero">
-        <h1>Event photos, made easy</h1>
-        <p>Create a private link, share it with guests, and watch your gallery fill up in real-time.</p>
-        <Link className="btn" to="/create">Create an event</Link>
+    <div className="page">
+      {/* Hero */}
+      <header className="hero">
+        <div className="container hero__wrap">
+          <div className="hero__text">
+            <p className="eyebrow">Coming soon</p>
+            <h1 className="hero__title">Event photos, made easy</h1>
+            <p className="hero__sub">
+              A private way to collect and share memories with the people who matter most.
+            </p>
+
+            {/* Waitlist (no navigation while testing) */}
+            <form className="cta" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                required
+                placeholder="Join the waitlist (email)"
+                className="cta__input"
+              />
+              <button type="submit" className="cta__btn">Notify me</button>
+            </form>
+
+            <p className="hero__note">Early access is limited. Join the waitlist above.</p>
+          </div>
+
+          <div className="hero__art">
+            <img src="/hero.jpg" alt="Groufie brand artwork" className="hero__img" />
+          </div>
+        </div>
+      </header>
+
+      {/* Subtle value proposition */}
+      <section className="value">
+        <div className="container text-center">
+          <h2 className="value__title">Privacy at the core</h2>
+          <p className="value__copy">
+            Groufie is built on a simple idea: your memories belong to you.
+            Every gallery is private by default, designed for secure sharing with only the people you choose.
+            Nothing public, nothing complicated — just peace of mind while you celebrate.
+          </p>
+        </div>
       </section>
 
-      <div className="grid">
-        <div className="card">
-          <h3>Fast mobile uploads</h3>
-          <p>Pre-signed S3 uploads direct from your phone. No logins needed for guests.</p>
-        </div>
-        <div className="card">
-          <h3>Privacy-first</h3>
-          <p>Private event links with optional passcodes. Delete any photo instantly.</p>
-        </div>
-        <div className="card">
-          <h3>Share or print</h3>
-          <p>Choose compression for quick sharing, or keep originals for print.</p>
-        </div>
-      </div>
+      {/* Footer (no links) */}
+      <footer className="footer">
+        © 9 Fingers Digital 2025
+      </footer>
     </div>
-  )
+  );
 }
