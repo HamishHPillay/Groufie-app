@@ -1,18 +1,6 @@
-import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import Home from "./pages/Home";
 
-export default function App(){
-  return (
-    <div className="container">
-      <header>
-        <Link className="logo" to="/">Groufie</Link>
-        <nav>
-          <Link to="/create">Create an event</Link>
-          <Link to="/join">Join</Link>
-        </nav>
-      </header>
-      <Outlet />
-      <footer>© Groufie</footer>
-    </div>
-  )
+export default function App() {
+  // Public mode: single-surface landing only
+  return <Home />;
 }
