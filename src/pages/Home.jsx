@@ -31,15 +31,6 @@ export default function Home() {
           <p className="text-white/80 mt-3">
             Early access is limited. Join the waitlist above.
           </p>
-
-          {/* Hero image */}
-          <div className="mt-10 flex justify-center">
-            <img
-              src="/hero.jpg"
-              alt="Groufie brand artwork"
-              className="w-full max-w-md rounded-2xl shadow-2xl ring-1 ring-white/20"
-            />
-          </div>
         </div>
       </header>
 
