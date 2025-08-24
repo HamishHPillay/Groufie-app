@@ -2,40 +2,54 @@ export default function Home() {
   return (
     <div className="page">
       {/* Hero */}
-      <header className="hero">
-        <div className="container hero__wrap">
-          <div className="hero__text">
-            <p className="eyebrow">Coming soon</p>
-            <h1 className="hero__title">Event photos, made easy</h1>
-            <p className="hero__sub">
-              A private way to collect and share memories with the people who matter most.
-            </p>
+      <header className="relative isolate overflow-hidden bg-gradient-to-br from-teal-400 to-teal-600 text-white">
+        <div className="max-w-5xl mx-auto px-6 pt-20 pb-14 text-center">
+          <p className="uppercase tracking-[0.2em] opacity-90 mb-3">Coming soon</p>
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+            Event photos, made easy
+          </h1>
+          <p className="text-white/90 text-lg md:text-xl mt-4 max-w-2xl mx-auto">
+            A private way to collect and share memories with the people who matter most.
+          </p>
 
-            {/* Waitlist (no navigation while testing) */}
-            <form className="cta" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                required
-                placeholder="Join the waitlist (email)"
-                className="cta__input"
-              />
-              <button type="submit" className="cta__btn">Notify me</button>
-            </form>
+          {/* Waitlist (test mode, no real submit) */}
+          <form className="mt-6 flex w-full max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="email"
+              required
+              placeholder="Join the waitlist (email)"
+              className="flex-grow px-4 py-3 rounded-l-xl bg-white/95 text-gray-900 outline-none"
+            />
+            <button
+              type="submit"
+              className="px-5 py-3 rounded-r-xl bg-gray-900 text-white font-medium hover:opacity-90"
+            >
+              Notify me
+            </button>
+          </form>
 
-            <p className="hero__note">Early access is limited. Join the waitlist above.</p>
-          </div>
+          <p className="text-white/80 mt-3">
+            Early access is limited. Join the waitlist above.
+          </p>
 
-          <div className="hero__art">
-            <img src="/hero.jpg" alt="Groufie brand artwork" className="hero__img" />
+          {/* Hero image */}
+          <div className="mt-10 flex justify-center">
+            <img
+              src="/hero.jpg"
+              alt="Groufie brand artwork"
+              className="w-full max-w-md rounded-2xl shadow-2xl ring-1 ring-white/20"
+            />
           </div>
         </div>
       </header>
 
-      {/* Subtle value proposition */}
-      <section className="value">
-        <div className="container text-center">
-          <h2 className="value__title">Privacy at the core</h2>
-          <p className="value__copy">
+      {/* Value proposition */}
+      <section className="bg-white">
+        <div className="max-w-3xl mx-auto px-6 py-12 md:py-16 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+            Privacy at the core
+          </h2>
+          <p className="mt-4 text-lg text-gray-700 leading-relaxed">
             Groufie is built on a simple idea: your memories belong to you.
             Every gallery is private by default, designed for secure sharing with only the people you choose.
             Nothing public, nothing complicated — just peace of mind while you celebrate.
@@ -43,8 +57,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer (no links) */}
-      <footer className="footer">
+      {/* Footer */}
+      <footer className="mt-auto text-center text-sm text-gray-500 py-8">
         © 9 Fingers Digital 2025
       </footer>
     </div>
